@@ -14,8 +14,9 @@ class Prop():
         self.room = None
 
 class Weapon(Prop):
-    def __init__(self, name):
+    def __init__(self, name, blood=False):
         super().__init__(name, PropType.WEAPON)
+        self.blood = blood
 
 class Clue(Prop):
     def __init__(self, name):
