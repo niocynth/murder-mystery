@@ -1,0 +1,2 @@
+from objects.rooms import *
+
