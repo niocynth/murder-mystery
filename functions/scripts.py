@@ -1,5 +1,14 @@
-def open_files():
-    pass
+import os
+import json
+
+def open_file(file):
+    item = f"./content/{file}.json"
+    if not os.path.exists(item):
+        raise FileNotFoundError(f"File ./content/{file}.json does not exist")
+    with open(item, 'r') as file:
+        data = json.load(file)
+    
+    print(json.dumps(data, indent=4))
 
 def load_story():
     # load the script to the story

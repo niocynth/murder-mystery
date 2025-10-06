@@ -1,0 +1,14 @@
+{
+    "list": [
+        {
+            "id": 1,
+            "name": "Dagger",
+            "description": "Sharp pointy thing"
+        },
+        {   
+            "id": 2,
+            "name": "Revolver",
+            "description": "Shooty thing"
+        }
+    ]
+}
