@@ -1,9 +1,5 @@
 from enum import Enum
-
-class PropType(Enum):
-    WEAPON = "weapon"
-    CLUE = "clue"
-    RED_HERRING = "red_herring"
+from constants.enums import *
 
 class Prop():
     def __init__(self, name, type):

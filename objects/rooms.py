@@ -1,5 +1,6 @@
 from enum import Enum
-from constants import *
+from constants.defaults import *
+from constants.enums import *
 
 class map():
     def __init__(self, width=MAP_WIDTH, height=MAP_HEIGHT):
@@ -14,16 +15,6 @@ class map():
             self.rooms += (temp_width,)
 
         print(self.rooms)
-
-class RoomType(Enum):
-    HALL = "hall"
-    LIVING_ROOM = "living_room"
-    DINING_ROOM = "dining_room"
-    STUDY = "study"
-    LIBRARY = "library"
-    KITCHEN = "kitchen"
-    BEDROOM = "bedroom"
-    
 
 class Room():
     def __init__(self, coordinates):
