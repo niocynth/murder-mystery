@@ -1,4 +1,3 @@
-from enum import Enum
 from constants.enums import *
 
 class CastMember():
@@ -15,9 +14,9 @@ class CastMember():
 
         match gender:
             case Gender.MALE:
-                self.pronouns = (He, Him, His)
+                self.pronouns = ("He", "Him", "His")
             case Gender.FEMALE:
-                self.pronouns = (She, Her, Hers)
+                self.pronouns = ("She", "Her", "Hers")
             case _:
                 raise Exception("Gender does not exist")
 
