@@ -1,5 +1,6 @@
 import os
 import json
+from constants.defaults import *
 
 def open_file(file):
     item = f"./content/{file}.json"
@@ -7,37 +8,41 @@ def open_file(file):
         raise FileNotFoundError(f"File ./content/{file}.json does not exist")
     with open(item, 'r') as file:
         data = json.load(file)
-    
-    print(json.dumps(data, indent=4))
+    return data
 
 def load_story():
     # load the script to the story
+    data = open_file("story")
     pass
 
-def load_prop_descriptions():
-    # load descriptions of the props
+def load_rooms(num_rooms=(MAP_HEIGHT*MAP_WIDTH)):
+    data = open_file("rooms")
     pass
 
-def load_weapon_descriptions():
+def load_weapons(num_weapons=WEAPONS):
     # load descriptions of the weapons
+    data = open_file("weapons")
     pass
 
-def load_cast_staff_descriptions():
+def load_cast_staff(num_staff=STAFF):
     # load descriptions of the staff
     pass
 
-def load_cast_family_descriptions():
+def load_cast_family(num_family=FAMILY):
     # load descriptions of the family members
     pass
 
-def load_clues():
+def load_clues(num_clues=CLUES):
     # genuine clues
+    load_red_herrings(num_clues)
     pass
 
-def load_red_herrings():
+def load_red_herrings(num_clues):
+    num_red_herrings = num_clues * 2
     # misleading clues
+    
     pass
 
-def load_blue_herrings():
+def load_blue_herrings(red_herrings):
     # counters to red herrings
     pass

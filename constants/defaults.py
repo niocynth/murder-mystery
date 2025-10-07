@@ -10,5 +10,5 @@ FAMILY=2
 
 # props
 CLUES=3
-WEAPON=4
+WEAPONS=4
 

@@ -18,7 +18,7 @@ class CastMember():
             case Gender.FEMALE:
                 self.pronouns = ("She", "Her", "Hers")
             case _:
-                raise Exception("Gender does not exist")
+                raise Exception(f"Gender does not exist for {name} the {relation}")
 
 class StaffMember(CastMember):
     def __init__(self, name, age, gender, job):
